@@ -1,0 +1,63 @@
+{
+  "partitions": [
+    {
+      "device": "sda1",
+      "type": "partition",
+      "size": "1M",
+      "mount_point": null
+    },
+    {
+      "device": "sda2",
+      "type": "partition",
+      "size": "2G",
+      "mount_point": "/boot"
+    },
+    {
+      "device": "sda3",
+      "type": "partition",
+      "size": "108G",
+      "mount_point": null,
+      "volume_group": {
+        "name": "alvaria",
+        "logical_volumes": [
+          {
+            "name": "lv_root",
+            "size": "30G",
+            "mount_point": "/",
+            "fstype": "ext4"
+          },
+          {
+            "name": "var_lib_pgsql",
+            "size": "21G",
+            "mount_point": "/var/lib/pgsql",
+            "fstype": "ext4"
+          },
+          {
+            "name": "var_opt_logserver",
+            "size": "15G",
+            "mount_point": "/var/opt/nsc/nsc-logserver",
+            "fstype": "ext4"
+          },
+          {
+            "name": "var_opt",
+            "size": "15G",
+            "mount_point": "/var/opt",
+            "fstype": "ext4"
+          },
+          {
+            "name": "opt",
+            "size": "12G",
+            "mount_point": "/opt",
+            "fstype": "ext4"
+          },
+          {
+            "name": "var_log",
+            "size": "15G",
+            "mount_point": "/var/log",
+            "fstype": "ext4"
+          }
+        ]
+      }
+    }
+  ]
+}
