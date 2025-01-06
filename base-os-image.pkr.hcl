@@ -18,7 +18,7 @@ source "vsphere-iso" "linux_vm" {
   host                = "10.30.30.110"
   insecure_connection = true
 
-  vm_name             = "Linux_VM_Packer"
+  vm_name             = "Base OS"
   CPUs                = 4
   RAM                 = 8192
   RAM_reserve_all     = true
